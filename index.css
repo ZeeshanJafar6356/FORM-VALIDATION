@@ -1,0 +1,243 @@
+body {
+  font-family: sans-serif;
+  width: 40%;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    width: 60%;
+  }
+}
+/* box attributes in which your data resides */
+.container {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+#nameError {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#nameError2 {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#makeError {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#text2 {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#modelError {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#modelError2 {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+
+#yearError {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+
+#makeError2 {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#makeError1 {
+  margin-left: 5px;
+}
+#add {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+#add2 {
+  margin-top: -20px;
+  margin-left: 5px;
+}
+
+/* Sign up customization heading only*/
+.container h2 {
+  text-align: center;
+  font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  font-weight: 600;
+  color: orange;
+}
+
+/* horizontal lines between text */
+h2::before,
+h2::after {
+  display: inline-block;
+  content: '';
+  border-top: 0.2rem solid black;
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 5rem;
+  transform: translateY(-0.2rem);
+}
+@media screen and (max-width: 992px) {
+  h2::before,
+  h2::after {
+    width: 0rem;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
+
+/* Input customization */
+.inputBox input {
+  width: 89%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.inputBox label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin-top: 30px;
+  padding: 0.625rem 0;
+  color: grey;
+  pointer-events: none;
+  transition: 0.25s;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label,
+.inputBox input:not([value='']) ~ label {
+  top: -1.125rem;
+  left: 10px;
+  color: #1a73e8;
+  font-size: 0.75rem;
+  background-color: white;
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.inputBox input:focus {
+  outline: none;
+  border: 2px solid #1a73e8;
+}
+
+input[type='submit'] {
+  border: none;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: orange;
+  width: 50%;
+  font-size: 18px;
+  color: white;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-left: 130px;
+  /* margin-left: 550px; */
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .input[type='submit'] {
+    font-size: 18px;
+    margin-left: 30px;
+  }
+}
+input:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  #carMileage {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #carYear {
+    width: 70%;
+  }
+}
+
+#carYear {
+  width: 118%;
+}
+/* #carMileage {
+  width: 120%;
+} */
+
+#tabledata {
+  margin-left: 200px;
+  width: 200%;
+  margin-top: 50px;
+}
+#tabledata th,
+td {
+  border: 1.5px solid white;
+  text-align: center;
+  color: white;
+}
+td {
+  background-color: #1a73e8;
+  color: white;
+
+  border: 2px solid #eee;
+}
+
+#button {
+  background-color: #1a73e8;
+  color: whitesmoke;
+  border-radius: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 20%;
+  color: white;
+  padding: 20px;
+  width: 30%;
+  font-size: 26px;
+  margin: 20px 20px;
+  margin-left: 120%;
+  cursor: pointer;
+  opacity: 0.6;
+}
+#button:hover {
+  background-color: #1a73e8;
+  color: white;
+  opacity: 1;
+}
+#data {
+  /* margin-left: 130%; */
+  margin-left: 130%;
+  border-left: 22px solid #1a73e8;
+  color: aliceblue;
+  margin-top: 70px;
+}
+
+h1 {
+  color: #1a73e8;
+}
+#remove {
+  background-color: orange;
+  font-size: 30px;
+  height: 50px;
+  color: black;
+  opacity: 0.6;
+}
+#remove:hover {
+  background-color: orange;
+  opacity: 1;
+}

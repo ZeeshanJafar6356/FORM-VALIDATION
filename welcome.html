@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <style>
+      #tabledata th,
+      td {
+        width: 2%;
+        border: 3px solid black;
+        text-align: center;
+      }
+      td {
+        background-color: black;
+        color: whitesmoke;
+      }
+    </style>
+
+    <h1 style="text-align: center">Your Data</h1>
+    <table id="tabledata">
+      <tr>
+        <th>Car Name</th>
+        <th>Car Model</th>
+        <th>Car Make</th>
+        <th>Car Year</th>
+        <th>Car Mileage</th>
+        <th>Date Of Submit</th>
+      </tr>
+    </table>
+
+    <script>
+      const result = JSON.parse(localStorage.getItem('Information'));
+      // document.write(result);
+      const table = document.getElementById('tabledata');
+      for (let entries of result) {
+        let row = document.createElement('tr');
+
+        row.innerHTML = `<td>${entries.car}</td><td>${entries.model}</td><td>${entries.make}</td><td>${entries.carYear}</td><td>${entries.carMileage}</td><td>${entries.date}</td>`;
+        table.appendChild(row);
+      }
+
+      // const name = localStorage.getItem('Car-Name');
+      // const model = localStorage.getItem('Car-Model');
+      // const make = localStorage.getItem('Car-Make');
+      // const year = localStorage.getItem('Car-Year');
+      // const mileage = localStorage.getItem('Car-Mileage');
+      // const date = localStorage.getItem('Date Of Submission');
+
+      // document.write(
+      //   'Car Name ' + ' ' + ' = ' + name + '<br>' + '<br>' + '<br>'
+      // );
+      // document.write(
+      //   'Car Model ' + ' ' + ' = ' + model + '<br>' + '<br>' + '<br>'
+      // );
+      // document.write(
+      //   'Car Make ' + ' ' + ' = ' + make + '<br>' + '<br>' + '<br>'
+      // );
+      // document.write(
+      //   'Car Year ' + ' ' + ' = ' + year + '<br>' + '<br>' + '<br>'
+      // );
+      // document.write(
+      //   'Car Mileage ' + ' ' + ' = ' + mileage + '<br>' + '<br>' + '<br>'
+      // );
+      // document.write('Date of Form Submission ' + ' ' + ' = ' + date);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Car Registration</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- <button id="button" onclick="addform()">Add</button> -->
+
+  <div style="margin-left: 80%; width: 110%" class="container">
+    <form id="form" method="get" autocomplete="off">
+      <!-- <button onclick="remove(this)" style="margin-left: 95%" id="remove">
+        X
+      </button> -->
+      <h2><span>CAR REGISTRATION </span></h2>
+
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <div class="inputBox">
+            <input type="text" required id="carName" onkeyup="this.setAttribute('value', this.value);" value="" />
+            <label>Car Name</label>
+            <span id="nameError" style="font-size: 13px; display: none; color: red">Minimum 8 Characters</span>
+            <span id="nameError2" style="font-size: 13px; display: none; color: red">Enter Car Name</span>
+          </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <div class="inputBox">
+            <input type="text" id="carModel" required onkeyup="this.setAttribute('value', this.value);" value="" />
+            <label>Car Model</label>
+            <span id="modelError" style="font-size: 13px; display: none; color: red">Minimum 7 Characters</span>
+            <span id="modelError2" style="font-size: 13px; display: none; color: red">Enter Car Model</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <div class="inputBox">
+            <input type="text" id="carCompany" required onkeyup="this.setAttribute('value', this.value);" value="" />
+            <label>Car Company</label>
+            <span id="makeError2" style="font-size: 13px; display: none; color: red">Enter Car Make</span>
+            <span id="makeError" style="font-size: 13px; display: none; color: red">Minimum 7 Characters</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-12">
+            <div class="inputBox">
+              <input type="number" id="carYear" required onkeyup="this.setAttribute('value', this.value);" value="" />
+              <label>Car Year</label>
+              <span id="yearError" style="font-size: 13px; display: none; color: red">Enter Car Year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <div class="inputBox">
+            <input type="number" id="carMileage" required onkeyup="this.setAttribute('value', this.value);" value="" />
+            <label>Car Mileage</label>
+            <span id="add" style="font-size: 13px; display: none; color: red">Enter Car Mileage</span>
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <div class="inputBox">
+            <input type="number" id="carPrice" required onkeyup="this.setAttribute('value', this.value);" value="" />
+            <label>Car Price</label>
+            <span id="add2" style="font-size: 13px; display: none; color: red">Enter Car Price</span>
+          </div>
+        </div>
+      </div>
+      <image src="R.png" style="width: 50%; margin: auto; display: flex"></image>
+    </form>
+    <input type="submit" onclick="go();data()" id="submit" />
+  </div>
+
+  <div id="container"></div>
+
+  <h3 id="data">Your Data</h3>
+  <table id="tabledata">
+    <tr>
+      <th>Car Name</th>
+      <th>Car Model</th>
+      <th>Car Make</th>
+      <th>Car Year</th>
+      <th>Car Mileage</th>
+      <th>Car Price</th>
+      <th>Date Of Submit</th>
+    </tr>
+  </table>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
